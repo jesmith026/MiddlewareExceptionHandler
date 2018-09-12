@@ -5,7 +5,7 @@ namespace MiddlewareExceptionHandler.Extensions
 {
     public static class ApplicationExtensions
     {
-        public static void ConfigureExceptionHandler(this IApplicationBuilder app)
+        public static void UseMyExceptionHandler(this IApplicationBuilder app)
         {
             app.UseExceptionHandler(err => err.Run(MyExceptionHandler.Handle));
         }

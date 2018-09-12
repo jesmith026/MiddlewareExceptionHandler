@@ -30,7 +30,7 @@ namespace MiddlewareExceptionHandler
                 app.UseDeveloperExceptionPage();
             }
 
-            app.ConfigureExceptionHandler();
+            app.UseMyExceptionHandler();
 
             app.UseMvc();
         }
