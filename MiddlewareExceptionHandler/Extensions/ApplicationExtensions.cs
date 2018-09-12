@@ -7,7 +7,7 @@ namespace MiddlewareExceptionHandler.Extensions
     {
         public static void UseMyExceptionHandler(this IApplicationBuilder app)
         {
-            app.UseExceptionHandler(err => err.Run(MyExceptionHandler.Handle));
+            app.UseExceptionHandler(err => err.Run(MyExceptionHandler.HandleAsync));
         }
     }
 }
