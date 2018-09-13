@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MiddlewareExceptionHandler.Exceptions;
 using System;
+using System.Security.Authentication;
 
 namespace MiddlewareExceptionHandler.Controllers
 {
@@ -24,6 +25,12 @@ namespace MiddlewareExceptionHandler.Controllers
         public IActionResult BadRequestExample()
         {
             throw new BadRequestException("Testing a Bad Request Exception");
+        }
+
+        [HttpGet("NotAuthorized")]
+        public IActionResult NotAuthorizedExample()
+        {
+            throw new AuthenticationException("Testing a Not Authorized Exception");
         }
 
         [HttpGet("Ok")]
